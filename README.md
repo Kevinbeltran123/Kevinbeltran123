@@ -1,3 +1,1 @@
-# 💫 About Me:
-Hi, I'm Kevin Beltrán 👋<br>I'm currently pursuing a double degree in Systems Engineering and Industrial Engineering. I'm passionate about continuous learning, exploring new technologies, and solving problems from both technical and strategic perspectives.<br><br>🧠 I'm a curious, adaptable, and proactive person who is always looking to improve my skills and contribute meaningfully to the projects I’m involved in.<br>🚀 I enjoy working in teams, learning from others, and taking on new challenges that help me grow as a professional.<br><br>💡 Current interests:<br><br>Software development and engineering best practices<br><br>Process optimization and data analysis<br><br>Cybersecurity and infrastructure<br><br>Automation and complex systems
 
