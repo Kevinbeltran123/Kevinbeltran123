@@ -30,7 +30,6 @@ Systems & Industrial Engineering student with a focus on data science, machine l
 
 ![Kevin's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Kevinbeltran123&show_icons=true&theme=default&hide_border=true&count_private=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kevinbeltran123&layout=compact&hide_border=true&theme=default)
 
 ---
 
