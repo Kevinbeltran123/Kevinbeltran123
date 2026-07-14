@@ -1,35 +1,57 @@
 # Kevin Beltrán
 
-Systems & Industrial Engineering student with a focus on data science, machine learning, and backend development. I enjoy working with data pipelines, predictive models, and building full-stack applications.
+Systems & Industrial Engineering student. I build production systems: an ERP that a paint factory runs its accounting on, and a multi-sport betting engine that only ships a pick when it can prove an edge against the closing line.
+
+Most of what I enjoy sits where data meets a real decision — pricing, inventory, forecasting, risk.
 
 ---
 
-## Tech Stack
+## Projects
 
-**Data & Machine Learning**
+### [Pantón Color](https://github.com/Kevinbeltran123/Panton_Color) — ERP in production
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-189AB4?style=flat)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+A web/PWA ERP that replaced the paper notebooks of [Pantón Color](https://pantoncolor.com), a Colombian paint factory. Ten modules covering accounting, color formulas, raw-material inventory, quotations, and production costing.
 
-**Full-Stack Development**
+The parts worth looking at:
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)
+- **Colombian tax retentions** (ReteFuente / ReteIVA / ReteICA), monthly periods with locked closings, and an append-only audit log.
+- **Money-safe by construction** — business logic lives in Postgres `SECURITY DEFINER` RPCs behind Row-Level Security, so amounts are computed server-side and cannot be tampered with from the client.
+- **Atomic production runs** — starting a run freezes an ingredient snapshot and deducts inventory in a single transaction.
+- Weighted-average costing on material purchases.
+
+`Next.js 16` · `React 19` · `TypeScript` · `Supabase / PostgreSQL` · `RLS` · `Tailwind` · 248 tests
 
 ---
 
-## GitHub Stats
+### [Betting Intelligence Platform](https://github.com/Kevinbeltran123/Betting-Platform) — quantitative edge detection
 
-![Kevin's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Kevinbeltran123&show_icons=true&theme=default&hide_border=true&count_private=true)
+Detects statistical edge with a gradient-boosting ensemble, has an LLM validate the pick, and delivers it over Telegram. A human places the bet; nothing is automated end to end.
 
+**The core thesis is a discipline, not a feature:** ship a pick only when CLV beats the Pinnacle closing line by more than +3%. If there is no edge, the system sends nothing. Measuring against the closing line is the honest way to tell signal from variance.
+
+- Ensemble of XGBoost / CatBoost / LightGBM, with Dixon-Coles and bivariate Poisson goal models.
+- Sport-agnostic core with a plugin layer per sport.
+- Every secret loads from the environment through Pydantic settings — no credentials in code.
+
+`Python 3.12` · `Polars` · `XGBoost / CatBoost / LightGBM` · `Pydantic v2` · `Supabase` · `uv` · 874 tests in CI
+
+---
+
+### [UnibaBot PDA](https://github.com/Kevinbeltran123/Unibabot_PDA) — LLM agent for compliance
+
+Given an Academic Development Plan as a PDF, the agent checks it against 179 institutional guidelines and returns a report with cited evidence and prescriptive corrections. Includes a head-to-head benchmark of a rule-driven dispatcher against semantic RAG.
+
+`Python` · `FastAPI` · `Qwen 2.5 14B` · `Docling` · `RAG` · `Next.js` · IEEE technical report
+
+---
+
+### [Macroly](https://github.com/Kevinbeltran123/UI-UX-Macroly) — PWA, live
+
+Spanish-language grocery PWA with real-time macronutrient tracking, built around WCAG accessibility and UX research.
+
+**Live:** [macroly.vercel.app](https://macroly.vercel.app)
+
+`Next.js 16` · `TypeScript` · `Zustand` · `Supabase` · `PWA` · `WCAG`
 
 ---
 
