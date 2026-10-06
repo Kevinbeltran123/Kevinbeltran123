@@ -15,7 +15,7 @@ JavaScript and SQL.
   OCR of soil lab reports; a linear-programming model picks the lowest-cost fertilizer
   mix. Offline-first PWA for use on the farm. Python, FastAPI, React, PostgreSQL. Private
   code: ongoing research.
-- **Sports forecasting data platform.** ETL pipelines with Polars and Pydantic into
+- **[Sports forecasting data platform](https://github.com/Kevinbeltran123/sports-forecasting-platform).** ETL pipelines with Polars and Pydantic into
   PostgreSQL, a gradient-boosting ensemble (XGBoost, CatBoost, LightGBM) and more than
   3,000 automated tests.
 - **Field software for an engineering company.** An offline app for technical site
